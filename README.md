@@ -33,34 +33,23 @@ $ forge test
 $ forge fmt
 ```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
 ### Deploy
 
 ```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+$ forge script script/QuizArena.s.sol:QuizArenaScript --rpc-url https://rpc.open-campus-codex.gelato.digital/ --private-key <your_private_key>
 ```
 
-### Cast
-
-```shell
-$ cast <subcommand>
+### Verify 
+``` publish
+$ forge verify-contract \
+  --rpc-url https://rpc.open-campus-codex.gelato.digital \
+  --verifier blockscout \
+  --verifier-url 'https://opencampus-codex.blockscout.com/api/' \
+  0xf39545811E429e2A8308cF55fBce8B5EC75285DB \
+  src/QuizArena.sol:QuizArena
 ```
 
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+### Gas  
+``` gas
+$ forge test --gas-report
 ```
