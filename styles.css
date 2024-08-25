@@ -1,0 +1,86 @@
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    background-color: grey;
+}
+
+.choice {
+
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+}
+
+body {
+    background-color: #CAC8A4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;   
+    font-family: 'Russo One', sans-serif;
+}
+
+.logo {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+.animation {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeAndMove 1.5s ease-out 0.5s forwards;
+}
+
+@keyframes fadeAndMove {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+ }
+
+ 
+.text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.report-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.report-button:hover {
+    background-color: red;
+}
+
+.check-mark {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    color: green;
+    font-size: 30px; /* Adjust font size for larger check mark */
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8); /* Start smaller and grow when visible */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+

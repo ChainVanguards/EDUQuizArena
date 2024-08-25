@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- font - body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- font - title -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Russo+One&display=swap" rel="stylesheet">
+    <title>EDU QuizArena | Limited</title>
+    <link rel="icon" type="image/x-icon" href="./logos/logo-color.png">
+</head>
+<style>
+    body {
+        background-color: #00b009;
+    }
+</style>
+<body>
+    <div class="logo">
+        <h1 class="animation"><a href="index.html">EDU QuizArena</a> <small>| Limited</small></h1>
+    </div>
+    <div class="quiz-container">
+        <button class="report-button" onclick="reportQuestion()">Report Question</button>
+        <span class="check-mark" id="check-mark">&#10003;</span>
+        <h1 id="question-number">Question 1</h1>
+        <h2 id="question-text">Question goes here...</h2>
+        <div id="choices">
+            <button class="choice" onclick="checkAnswer(0)">Choice 1</button>
+            <button class="choice" onclick="checkAnswer(1)">Choice 2</button>
+            <button class="choice" onclick="checkAnswer(2)">Choice 3</button>
+        </div>
+        <p id="score">Score: 0</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
